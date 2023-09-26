@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-import { Inicio } from "../components/pages/inicio";
+import { Inicio } from "../components/pages/Inicio";
 import { Articulos } from "../components/pages/Articulos";
 import { Header } from "../components/layout/Header";
 import { Nav } from "../components/layout/Nav";
