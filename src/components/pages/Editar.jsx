@@ -103,8 +103,7 @@ export const Editar = () => {
             type="text"
             name="contenido"
             onChange={cambiado}
-            defaultValue={articulo.contenido}
-            
+            defaultValue={articulo.contenido}            
           />
         </div>
 
@@ -121,7 +120,7 @@ export const Editar = () => {
           <input type="file" name="file0" id="file" />
         </div>
         <input type="submit" value="Guardar" className="btn btn-success" />
-      </form>{console.log(articulo.imagen)}
+      </form>
     </div>
     
   );

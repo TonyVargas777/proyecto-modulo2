@@ -88,22 +88,23 @@ body {
   min-height: calc(100vh - 280px);
 }
 .articulo-item {  
-  background: rgb(239, 243, 251);
+  display: flex;
+  flex-direction: column;
+  background: white;
   border: #0b70e1 2px solid;
   border-radius: 10px;
-  width: 25%;
+  width: 15%;
   box-shadow: 0px 0px 6px #ddd;
   margin: 20px;
-  padding-top: 35px;
+  padding-top: 15px;
   padding-bottom: 10px;
   padding-left: 25px;
   padding-right: 25px;
   display: flex;
   flex-grow: 1;
-  text-align: left;
+  text-align: center;
   align-items: center;
-  min-height: 400px;
-  height: fit-content;
+  min-height: fit-content;
 }
 .articulo-item:hover {
   background: rgb(2, 0, 36);
@@ -113,7 +114,7 @@ body {
     rgba(9, 9, 121, 1) 35%,
     rgba(0, 212, 255, 1) 100%
   );
-  border: 1px solid white;
+  border: 8px solid white;
   transform: scale(1.1);
   transition: all 400ms;
   color: white;
@@ -125,14 +126,12 @@ body {
     border: 1px solid white;
   }
   & a {
-    font-size: larger;
     color: white;
   }
 }
 
 .articulo-item .mascara {
-  width: 100px;
-  margin-right: 20px;
+  width:10vw;
   height: 375px;
   display: flex;
   justify-content: center;
@@ -361,7 +360,6 @@ textarea {
   }
   .content {
     display: flex;
-    /* flex-flow: column wrap; */
     flex-direction: column;
     justify-content: flex-start;
     align-content: center;
@@ -370,7 +368,7 @@ textarea {
     justify-items: center;
   }
   .articulo-item {
-    width: fit-content;
+    width: 60%;
     height: fit-content;
     margin-top: 20px;
   }
