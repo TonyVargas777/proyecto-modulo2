@@ -22,7 +22,7 @@ body {
 }
 .header {
   grid-area: header;
-  background-color: rgb(125, 220, 255);
+  background-image: url(../public/img/fondo-puntos-azules-color-blanco_42331-244.avif);
   text-align: left;
   font-style: italic;
   display: flex;
@@ -78,7 +78,7 @@ body {
 }
 .content {
   grid-area: content;
-  background: rgb(125, 220, 255);
+  background-image: url(../public/img/fondo-puntos-azules-color-blanco_42331-244.avif);
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
@@ -90,8 +90,8 @@ body {
 .articulo-item {  
   display: flex;
   flex-direction: column;
-  background: white;
-  border: #0b70e1 2px solid;
+  background-color: rgb(125, 220, 255);
+  outline: #0b70e1 2px solid;  
   border-radius: 10px;
   width: 15%;
   box-shadow: 0px 0px 6px #ddd;
@@ -233,7 +233,7 @@ input[type="button"],
 }
 .lateral {
   grid-area: lateral;
-  background: rgb(125, 220, 255);
+  background-image: url(../public/img/fondo-puntos-azules-color-blanco_42331-244.avif);
   border-left: 1px solid #ddd;
   padding: 20px;
   min-height: 100%;
