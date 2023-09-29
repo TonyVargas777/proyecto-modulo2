@@ -33,6 +33,7 @@ body {
 }
 .camara{
   width: 200px;
+  height: 200px;
   margin-right: -25px;
   margin-left: -35px;
 }
@@ -80,8 +81,9 @@ body {
 }
 .articulo-item {  
   display: flex;
-  flex-direction: column;
-  background-color: rgb(125, 220, 255);  
+  flex-direction: column;  
+  background-image: url(../public/img/fondo-puntos-azules-color-blanco_42331-244.avif);
+  /* background-color: rgb(125, 220, 255); */  
   border: double 15px rgba(255,255,255,1);
   /* border: #0b70e1 3px double; */    
   border-radius: 10px;
@@ -386,6 +388,7 @@ textarea {
   }
   .camara{
     width: 20%;
+    height: 20%;
     margin-right: -25px;
     margin-left: -55px;
   }
@@ -398,6 +401,7 @@ textarea {
   }
   .camara{
     width: 30%;
+    height: 30%;
     margin-right: -25px;
     margin-left: -55px;
   }
