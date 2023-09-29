@@ -1,6 +1,6 @@
-html{
+html {
   height: 100%;
-  background-image: url(../public/img/fondo-puntos-azules-color-blanco_42331-244.avif);
+  background-image: url(/img/fondo-puntos-azules-color-blanco_42331-244.avif);
 }
 body {
   font-family: sans-serif, Arial, Helvetica;
@@ -31,19 +31,23 @@ body {
   /* margin-left: 15px; */
   margin-top: 30px;
 }
-.camara{
+.camara {
   width: 200px;
   height: 200px;
   margin-right: -25px;
   margin-left: -35px;
 }
-.camara img{
+.camara img {
   width: 40%;
 }
-
 .nav {
   grid-area: nav;
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
   display: flex;
   justify-content: center;
 }
@@ -79,13 +83,11 @@ body {
   flex-grow: 1;
   min-height: calc(100vh - 280px);
 }
-.articulo-item {  
+.articulo-item {
   display: flex;
-  flex-direction: column;  
-  background-image: url(../public/img/fondo-puntos-azules-color-blanco_42331-244.avif);
-  /* background-color: rgb(125, 220, 255); */  
-  border: double 15px rgba(255,255,255,1);
-  /* border: #0b70e1 3px double; */    
+  flex-direction: column;
+  background-image: url(/img/fondo-puntos-azules-color-blanco_42331-244.avif);
+  border: double 15px rgba(255, 255, 255, 1);
   border-radius: 10px;
   width: 15%;
   box-shadow: 0px 0px 6px #ddd;
@@ -124,9 +126,8 @@ body {
     color: white;
   }
 }
-
 .articulo-item .mascara {
-  width:10vw;
+  width: 10vw;
   height: 375px;
   display: flex;
   justify-content: center;
@@ -163,7 +164,12 @@ img {
   height: fit-content;
   padding: 55px;
   padding-bottom: 75px;
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
   border: 2px solid blue;
   border-radius: 10px;
   box-shadow: 0px 0px 6px #ddd;
@@ -177,14 +183,15 @@ img {
   font-size: 35px;
   color: white;
 }
-.jumbo p, h3 {
+.jumbo p,
+h3 {
   display: block;
   margin-bottom: 40px;
   color: white;
 }
 
-.title{
-    color: #000;
+.title {
+  color: #000;
 }
 .jumbo-articulo {
   display: flex;
@@ -214,8 +221,8 @@ input[type="button"],
   cursor: pointer;
   transition: all 300ms;
 }
-.button:hover{
-    transform:scale(1.2);
+.button:hover {
+  transform: scale(1.2);
 }
 .edit {
   margin-right: 20px;
@@ -291,7 +298,7 @@ textarea {
   text-align: left;
   line-height: 60px;
   padding-left: 25px;
-  margin-top:auto;
+  margin-top: auto;
 }
 .jumbo .mascara {
   width: 250px;
@@ -358,18 +365,20 @@ textarea {
     flex-direction: column;
     justify-content: flex-start;
     align-content: center;
-    width: 100%; 
-    min-height: 110vh;   
+    width: 100%;
+    min-height: 110vh;
     justify-items: center;
   }
   .articulo-item {
-    width: 60%;
+    width: 30%;
     height: fit-content;
     margin-top: 20px;
   }
+  .content{
+    flex-direction: row;
+  }
   aside {
-    width: 0px;/* 
-    visibility: hidden; */
+    width: 0px;
     display: none;
   }
   nav {
@@ -386,12 +395,12 @@ textarea {
   .jumbo-articulo img {
     width: 200px;
   }
-  .camara{
+  .camara {
     width: 20%;
     height: 20%;
     margin-right: -25px;
     margin-left: -55px;
-  }
+  }  
 }
 @media (max-width: 600px) {
   nav {
@@ -399,10 +408,17 @@ textarea {
     flex-direction: column;
     width: 600px;
   }
-  .camara{
+  .camara {
     width: 30%;
     height: 30%;
     margin-right: -25px;
     margin-left: -55px;
+  }
+  .content{
+    width: 100%;
+    flex-direction: column;
+  }
+  .articulo-item{
+    width: 70%;
   }
 }

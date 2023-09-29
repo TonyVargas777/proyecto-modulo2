@@ -1,5 +1,4 @@
 export const Peticion = async (url, metodo, datosGuardar = "", archivos = false) => {
-
   
   let cargando = true;
 
@@ -27,9 +26,7 @@ export const Peticion = async (url, metodo, datosGuardar = "", archivos = false)
         "Content-Type": "application/json",
       },
     };
-    }
-
-    
+    }    
   }
 
   const peticion = await fetch(url, opciones);
