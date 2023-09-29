@@ -20,15 +20,19 @@ body {
   grid-template-rows: 100px 70px auto 70px;
   grid-template-columns: 1fr 1fr 1fr 20%;
 }
-.header {
+.header {  
   grid-area: header;
+  background-image: url(/img/fondo-puntos-azules-color-blanco_42331-244.avif);
+  width: 100vw;
+  height: 100px;
   text-align: center;
   font-style: italic;
   display: flex;
   justify-content: center;
+  top: 0;
+  position: fixed;
 }
 .header h1 {
-  /* margin-left: 15px; */
   margin-top: 30px;
 }
 .camara {
@@ -49,7 +53,10 @@ body {
     rgba(0, 212, 255, 1) 100%
   );
   display: flex;
-  justify-content: center;
+  justify-content: center;  
+  position: fixed;
+  top: 100px;
+  width: 100vw;
 }
 .nav > ul {
   display: flex;
@@ -299,6 +306,9 @@ textarea {
   line-height: 60px;
   padding-left: 25px;
   margin-top: auto;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
 }
 .jumbo .mascara {
   width: 250px;
@@ -346,10 +356,10 @@ textarea {
     grid-template-areas:
       "header header header header"
       "nav nav nav nav"
-      "lateral lateral lateral lateral "
       "content content content content"
+      "lateral lateral lateral lateral "
       "footer footer footer footer";
-    grid-template-rows: 100px 70px 50px auto 70px;
+    grid-template-rows: 100px 70px auto 70px 50px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
   article {
@@ -359,14 +369,13 @@ textarea {
   }
   .articulo-item .mascara {
     width: 200px;
-  }
+  }  
   .content {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-content: center;
     width: 100%;
-    min-height: 110vh;
+    min-height: 0;
     justify-items: center;
   }
   .articulo-item {
@@ -377,14 +386,16 @@ textarea {
   .content{
     flex-direction: row;
   }
-  aside {
-    width: 0px;
-    display: none;
-  }
-  nav {
-    display: flex;
+   nav {
+    position: relative;
+    top:initial;
+   /*  display: flex;
     flex-direction: column;
     width: 100vw;
+    top:0; */
+  }
+  .header{
+    position: relative;
   }
   .jumbo {
     width: 440px;
@@ -401,12 +412,35 @@ textarea {
     margin-right: -25px;
     margin-left: -55px;
   }  
+  .lateral {
+    grid-area: lateral;
+    border-left: 1px solid #ddd;
+    padding: 20px;
+    min-height: 100%;
+  }
+  .lateral > div {
+    box-sizing: border-box;
+    width: 90%;
+    margin: 20px;
+    padding: 20px;
+    padding-top: 10px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px #ddd;
+  }
+  .footer{
+    position:absolute;
+    bottom: 0;
+  }
 }
 @media (max-width: 600px) {
-  nav {
+  nav { 
+    position: relative;
     display: flex;
-    flex-direction: column;
-    width: 600px;
+    flex-direction: column;   
+  }
+  .header{
+    position: relative;
   }
   .camara {
     width: 30%;
