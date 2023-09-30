@@ -433,17 +433,14 @@ textarea {
   }  
   .footer{
     grid-area: footer;
-    bottom: initial;
-    text-align: center;
-    /* position:sticky; */
+    display: none;
   }
 }
 @media (max-width: 600px) {
   html{
     width: 100vw;
     height: 100vh;
-  }
-  
+  }  
   nav { 
     display: flex;
     flex-direction: column;
@@ -468,8 +465,7 @@ textarea {
     width: 80%;
     min-width: 400px;
     padding: 40px;
-  }
-  
+  }  
   .articulo-item{
     width: 70%;
   }
