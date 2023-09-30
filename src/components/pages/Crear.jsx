@@ -11,51 +11,50 @@ export const Crear = () => {
   const guardarArticulo = async (e) => {
     e.preventDefault();
     let nuevoArticulo = formulario;
-
+  
     const { datos } = await Peticion(
       Global.url + "crear",
       "POST",
       nuevoArticulo
     );
-    
+  
     if (datos.status === "success") {
       setResultado("guardado");
+  
+      const fileInput = document.querySelector("#file");
+  
+      if (fileInput) {
+        const formData = new FormData();
+        for (let i = 0; i < fileInput.files.length; i++) {
+          formData.append("file" + i, fileInput.files[i]); // Append files with unique names
+        }
+  
+        const subida = await Peticion(
+          Global.url + "subir-imagen/" + datos.articulo._id, // Corrected URL
+          "POST",
+          formData,
+          true
+        );
+  
+        if (subida.datos.status === "success") {
+          setResultado("guardado");
+        } else {
+          setResultado("error");
+        }
+      }
     } else {
       setResultado("error");
     }
-
-    const fileInput = document.querySelector("#file");
-
-    if (datos.status === "success" && fileInput) {
-      setResultado("guardado");
-
-      const formData = new formData();
-      formData.append("file0", fileInput.files);
-
-      const subida = await Peticion(
-        Global.url + "subir-imagen" + datos.articulo._id,
-        "POST",
-        formData,
-        true
-      );
-
-      if (subida.datos.status === "success") {
-        setResultado("guardado");
-      } else {
-        setResultado("error");
-      }
-    }    
-  };
-
+  }; 
   return (
     <div className="jumbo">
       <h1>Crear artículo:</h1>
       <p>Formulario para crear un artículo:</p>
 
       <strong>
-        {resultado == "guardado" ? "Artículo guardado con éxito" : ""}
+        {resultado === "guardado" ? "Artículo guardado con éxito" : ""}
       </strong>
-      <strong>{resultado == "error" ? "Los datos son incorrectos" : ""}</strong>
+      <strong>{resultado === "error" ? "Los datos son incorrectos" : ""}</strong>
 
       <form className="formulario" onSubmit={guardarArticulo}>
         <div className="form-group">
@@ -82,3 +81,4 @@ export const Crear = () => {
     </div>
   );
 };
+

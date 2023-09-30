@@ -109,7 +109,7 @@ export const Editar = () => {
 
         <div className="form-group">
           <label htmlFor="file0">Imagen</label>
-          <div className="mascara">
+          <div className="mascara">            
             {articulo.imagen != "default.png" && (
               <img src={Global.url + "imagen/" + articulo.imagen} />
             )}
