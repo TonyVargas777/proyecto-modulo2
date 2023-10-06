@@ -26,7 +26,15 @@ export const Articulos = () => {
   return (
     <>
       {cargando ? (
-        "Cargando..."
+        <section class="dots-container">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </section>
+      
+
       ) : articulos.length >= 1 ? (
         <Listado articulos={articulos} setArticulos={setArticulos} />
       ) : (

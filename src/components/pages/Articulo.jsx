@@ -39,7 +39,14 @@ export const Articulo = () => {
   return (
     <div className="jumbo">
       {cargando ? (
-        "Cargando..."
+        <section class="dots-container">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </section>
+      
       ) : (
         <>
           <h1>{articulo.titulo}</h1>
@@ -56,7 +63,7 @@ export const Articulo = () => {
             </h1>
             <h3>{articulo.contenido}</h3>
           </div></div>
-          <Link to={"/editar/" + articulo._id} className="edit">
+          <div><Link to={"/editar/" + articulo._id} className="edit">
             Editar
           </Link>
           <button
@@ -66,7 +73,7 @@ export const Articulo = () => {
             }}
           >
             Borrar
-          </button>
+          </button></div>
         </>
       )}
     </div>
