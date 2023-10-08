@@ -430,11 +430,6 @@ footer {
     grid-template-rows: 100px 70px auto 50px 50px;
     grid-template-columns: 100%;
   }
-  article {
-    display: flex;
-    flex-direction: column;
-    height: fit-content;
-  }
   .articulo-item .mascara {
     width: 200px;
   }  
