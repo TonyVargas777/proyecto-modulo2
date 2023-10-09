@@ -280,6 +280,9 @@ textarea {
   border-radius: 10px;
   box-shadow: 0px 0px 6px #ddd;
 }
+.formulario{
+  width: 80%;
+}
 .search input {
   border: 1px solid lightgrey;
 }
