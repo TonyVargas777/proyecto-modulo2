@@ -43,7 +43,9 @@ export const Busqueda = () => {
       ) : articulos.length >= 1 ? (
         <Listado articulos={articulos} setArticulos={setArticulos} />
       ) : (
-        <h1>No hay artículos</h1>
+        <div className="jumbo">
+          <h1>No hay artículos</h1>
+        </div>
       )}
     </>
   );
