@@ -16,10 +16,10 @@ body {
   height: 100%;
   display: grid;
   grid-template-areas:
-    "header header header header"
-    "nav nav nav nav"
+    "header header header lateral"
+    "nav nav nav lateral"
     "content content content lateral"
-    "footer footer footer footer";
+    "footer footer footer lateral";
   grid-template-rows: 100px 70px auto 70px;
   grid-template-columns: 1fr 1fr 1fr 15%;
 }
@@ -38,8 +38,8 @@ body {
   margin-top: 30px;
 }
 .camara {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  /* height: 200px; */
   margin-right: -25px;
   margin-left: -35px;
 }
@@ -91,10 +91,31 @@ body {
   flex-grow: 1;
   min-height: calc(100vh - 260px);
 }
+.img_inicio{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  width: 90%;
+  padding-left: 7%;
+}
+.mern{
+  width:30%;
+  justify-content: right;
+  align-items: right;
+}
+.gif{
+  width:30%;
+}
 #mern{
-  width: 40%;
+  width: 100%;
   padding: 5px;
   border: 6px double white;
+}
+#gif{
+  width: 45%;
+  padding: 5px;
+  border: 6px double blue;
 }
 .articulo-item {  
   display: flex;
@@ -251,9 +272,10 @@ input[type="button"],
 }
 .lateral {
   grid-area: lateral;
-  padding-top: 20px;
+  padding-top: 80%;
   min-height: 100%;
   width: auto;
+  border-left: 5px double white;
 }
 input[type="text"],
 textarea {
@@ -270,7 +292,7 @@ textarea {
   border-color: transparent;
 }
 .search {
-  width: 12%;
+  width: 13%;
   border: 2px solid blue;
   position: fixed;
   box-sizing: border-box;
@@ -433,7 +455,7 @@ footer {
       "footer";
     grid-template-rows: 100px 70px auto 50px 50px;
     grid-template-columns: 100%;
-  }
+  }  
   .articulo-item .mascara {
     width: 200px;
   }  
@@ -473,8 +495,7 @@ footer {
     width: 200px;
   }
   .camara {
-    width: 20%;
-    height: 20%;
+    width: 28%;
     margin-right: -25px;
     margin-left: -55px;
   }  
