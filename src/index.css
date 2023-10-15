@@ -38,7 +38,7 @@ body {
   margin-top: 30px;
 }
 .camara {
-  width: 250px;
+  width: 200px;
   /* height: 200px; */
   margin-right: -25px;
   margin-left: -35px;
@@ -91,24 +91,8 @@ body {
   flex-grow: 1;
   min-height: calc(100vh - 260px);
 }
-.img_inicio{
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: center;
-  width: 90%;
-  padding-left: 7%;
-}
-.mern{
-  width:30%;
-  justify-content: right;
-  align-items: right;
-}
-.gif{
-  width:30%;
-}
 #mern{
-  width: 100%;
+  width: 40%;
   padding: 5px;
   border: 6px double white;
 }
@@ -495,7 +479,7 @@ footer {
     width: 200px;
   }
   .camara {
-    width: 28%;
+    width: 15%;
     margin-right: -25px;
     margin-left: -55px;
   }  
@@ -555,8 +539,8 @@ footer {
     position: relative;
   }
   .camara {
-    width: 30%;
-    height: 30%;
+    width: 20%;
+    height: 20%;
     margin-right: -25px;
     margin-left: -55px;
   }
