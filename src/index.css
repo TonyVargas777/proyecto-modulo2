@@ -5,7 +5,7 @@ html {
   background-attachment: fixed;
 }
 body {
-  font-family: sans-serif, Arial, Helvetica;
+  font-family: Lucida Handwriting, sans-serif, Arial, Helvetica;
   text-align: center;
   display: flex;
   flex-direction: column;
