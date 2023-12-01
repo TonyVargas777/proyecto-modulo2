@@ -448,7 +448,6 @@ footer {
     justify-content: center;
     width: 100%;
     max-width: 100vh;
-    min-height: 100vh;
     justify-items: center;
   }
   .articulo-item {
