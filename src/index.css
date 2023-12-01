@@ -1,5 +1,4 @@
-html {
-  
+html {  
   height: 100%;
   background-image: url(/img/fondo-puntos-azules-color-blanco_42331-244.avif);
   background-attachment: fixed;
@@ -39,7 +38,6 @@ body {
 }
 .camara {
   width: 200px;
-  /* height: 200px; */
   margin-right: -25px;
   margin-left: -35px;
 }
@@ -89,7 +87,8 @@ body {
   padding-top: 16px;
   margin-bottom: 30px;
   flex-grow: 1;
-  min-height: calc(100vh - 260px);
+  min-height: screen;
+  min-width: screen;
 }
 #mern{
   width: 40%;
@@ -424,11 +423,11 @@ footer {
 
 @media (max-width: 1000px) {
   body{
-    width: 125%;
+    width: 100%;
     height: 100%;
   }
   .layout {
-    width: 100%;
+    width: 97%;
     height: 100%;
     display: grid;
     grid-template-areas:
@@ -448,7 +447,8 @@ footer {
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    min-height: fit-content;
+    max-width: 100vh;
+    min-height: 100vh;
     justify-items: center;
   }
   .articulo-item {
@@ -458,19 +458,25 @@ footer {
     margin: 20px;
   }
   .content{
-    flex-direction: row;
+    flex-direction: row;    
+    max-width: 100vh;
   }
    nav {    
     display: flex;
     flex-direction: column;
-    width: 100%;    
+    width: 100vh;    
   }
   .header{
     position: relative;
   }
+  .h1_header{
+    margin-left:3%;
+  }
   .jumbo{
     width: 80%;
-    min-width: 400px;
+    
+    max-width: 100vh;
+    
   }
   .jumbo-articulo {
     align-items: center;
@@ -479,7 +485,7 @@ footer {
     width: 200px;
   }
   .camara {
-    width: 15%;
+    width: 20%;
     margin-right: -25px;
     margin-left: -55px;
   }  
@@ -492,7 +498,6 @@ footer {
     display: flex;
     flex-direction: row;
     width: 90%;
-    min-width: 400px;
     height: 90px;    
     margin: 20px;
     padding: 20px;
@@ -501,6 +506,7 @@ footer {
     border-radius: 10px;
     box-shadow: 0px 0px 6px #ddd;    
     bottom: -15px;
+    left: 20px;
     position: fixed;
   }
   .search form{
@@ -518,7 +524,7 @@ footer {
     height: 100%;
   }  
   .layout {
-    width: 100%;
+    width: 99%;
     height: 100%;
     display: grid;
     grid-template-areas:
@@ -533,7 +539,7 @@ footer {
   nav { 
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 100vh;
   }
   .header{
     position: relative;
@@ -552,7 +558,7 @@ footer {
   }
   .jumbo{    
     width: 80%;
-    min-width: 400px;
+    max-width: 100vh;
     padding: 40px;
   }  
   .articulo-item{

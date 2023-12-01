@@ -6,7 +6,7 @@ export const Header = () => {
             <div className='camara'>                
                 <img  src="img/62843filmprojector_109301.png" alt="camara" />
             </div>            
-            <h1>Mi_Blog_de_Cine</h1>
+            <h1 className='h1_header'>Mi_Blog_de_Cine</h1>
         </header>
   )
 }
