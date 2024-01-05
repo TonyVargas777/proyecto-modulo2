@@ -16,7 +16,7 @@ export const Listado = ({articulos, setArticulos}) => {
         return (
           <article key={articulo._id} className="articulo-item">
             <div className="mascara">
-              {articulo.imagen != "default.png" && <img src={Global.url+"imagen/"+articulo.imagen} />}
+              {articulo.imagen != "default.png" && <img src={Global.url+"imagen/"+articulo.imagen} alt=""/>}
               {articulo.imagen == "default.png" && <img src="https://www.idsplus.net/wp-content/uploads/js-logo-badge-512.png"/>}
             </div>         
             <div className="datos">
