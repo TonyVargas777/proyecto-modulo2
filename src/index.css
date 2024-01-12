@@ -208,7 +208,9 @@ h3 {
   margin-bottom: 40px;
   color: white;
 }
-
+.jumbo a{
+  color:white;
+}
 .title {
   color: #000;
 }
