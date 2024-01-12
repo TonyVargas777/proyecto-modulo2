@@ -14,10 +14,10 @@ export const Sidebar = () => {
   return (
     <aside className="lateral">
       <div className="search">
-        <h3 className="title">Buscador:</h3>
-        <form onSubmit={hacerBusqueda} aria-label="formulario">
-          <input className="barra" width="100px" type="text" name="search_field" aria-label="búsqueda" />
-          <input type="submit" id="search" value="Buscar:" aria-label="botón" />
+        <p className="title">Buscador:</p>
+        <form onSubmit={hacerBusqueda} aria-label="busqueda">
+          <input className="barra" width="100px" type="text" name="search_field" aria-label="texto"/>
+          <input type="submit" id="search" value="Buscar:" aria-label="boton"/>
         </form>
       </div>
     </aside>
