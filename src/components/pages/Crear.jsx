@@ -59,22 +59,22 @@ export const Crear = () => {
       <form className="formulario" onSubmit={guardarArticulo}>
         <div className="form-group">
           <label htmlFor="titulo">Título</label>
-          <input type="text" name="titulo" onChange={cambiado} />
+          <input type="text" name="titulo" onChange={cambiado} aria-labelledby="titulo"/>
         </div>
 
         <div className="form-group">
           <label htmlFor="contenido">Contenido</label>
-          <textarea type="text" name="contenido" onChange={cambiado} />
+          <textarea type="text" name="contenido" onChange={cambiado} aria-labelledby="contenido"/>
         </div>
 
         <div className="form-group">
           <label htmlFor="contenido">Año:</label>
-          <input type="text" name="fecha" onChange={cambiado} />
+          <input type="text" name="fecha" onChange={cambiado} aria-labelledby="anyo"/>
         </div>
 
         <div className="form-group">
           <label htmlFor="file0">Imagen</label>
-          <input type="file" name="file0" id="file" />
+          <input type="file" name="file0" id="file" aria-labelledby="file0"/>
         </div>
         <input type="submit" value="Guardar" className="btn btn-success" />
       </form>
